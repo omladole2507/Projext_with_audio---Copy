@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Training Sessions</title>
+</head>
+<body>
+    <section class="session">
+        <!-- Biceps Section -->
+        <div class="session__card" style="margin-right: 0;">
+            <h4>TRAIN YOUR BICEPS</h4>
+            <p>Sculpt your physique and build muscle mass with our specialized biceps pose estimation</p>
+            <form action="/train_biceps" method="post">
+                <button class="btn btn__secondary">Start <i class="ri-arrow-right-line"></i></button>
+            </form>
+            <a href="/tutorial_biceps" class="btn btn__secondary" style="display:block; margin-top: 20px; width: 200px; left:120px">Watch Tutorial</a>
+        </div>
+
+        <!-- Shoulders Section -->
+        <div class="session__card" style="margin-right: 0;">
+            <h4>TRAIN YOUR SHOULDERS</h4>
+            <p>Elevate your physique and sculpt strong shoulders with our custom Shoulder exercise pose estimation.</p>
+            <form action="/train_shoulders" method="post">
+                <button class="btn btn__secondary">Start <i class="ri-arrow-right-line"></i></button>
+            </form>
+            <a href="/tutorial_shoulders" class="btn btn__secondary" style="display: block; margin-top: 20px; left:120px ; width:200px ">Watch Tutorial</a>
+        </div>
+
+        <!-- Squats Section -->
+        <div class="session__card" style="margin-right: 0;">
+            <h4>SQUATS</h4>
+            <p>Transform your physique and boost muscle growth with our tailored Squat pose estimation, maximizing your form.</p>
+            <form action="/train_squats" method="post">
+                <button class="btn btn__secondary">Start <i class="ri-arrow-right-line"></i></button>
+            </form>
+            <a href="/tutorial_squats" class="btn btn__secondary" style="display: block; margin-top: 20px; left:120px ; width:200px">Watch Tutorial</a>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

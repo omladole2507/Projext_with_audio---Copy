@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Cam</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Responsive container for webcam feed */
+        #webcam-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            width: 100%;   /* Full viewport width */
+            overflow: hidden;
+            background-color: black; /* Ensures background around the feed is visible */
+        }
+
+        /* Webcam feed styling */
+        #webcam-feed {
+            max-height: 100%;  /* Scale to fit vertically */
+            max-width: 100%;   /* Scale to fit horizontally */
+            object-fit: contain; /* Ensures entire feed fits within the container */
+        }
+
+        /* Stop Button Styles */
+        .stop-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .stop-btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div id="webcam-container">
+        <!-- Webcam Feed -->
+        <img id="webcam-feed" src="{{ webcam_url }}" alt="Webcam Feed">
+    </div>
+
+    <!-- Stop Button -->
+    <button class="stop-btn" onclick="window.location.href='/'">Stop</button>
+</body>
+</html>
